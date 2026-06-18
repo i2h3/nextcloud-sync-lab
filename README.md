@@ -2,6 +2,10 @@
 
 Tools for AI agents to set up and test Nextcloud desktop client synchronization scenarios in a development environment.
 
+This is built upon [the official Swift SDK for the model context protocol](https://github.com/modelcontextprotocol/swift-sdk) and [my Swift library for managing Nextcloud server containers in Docker on macOS](https://github.com/i2h3/nextcloud-container-manager).
+
+**Project status**: This is my first MCP server project and I only got started. See the issue tracker to get an idea which direction this is supposed to go into. 😁
+
 ## Requirements
 
 - macOS 26 Tahoe (support for other platforms might be possible but is out of scope for now)
