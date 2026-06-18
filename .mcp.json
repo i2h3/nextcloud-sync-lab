@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "nextcloud-sync-lab": {
+      "command": ".build/debug/NextcloudSyncLab"
+    }
+  }
+}

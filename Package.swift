@@ -5,16 +5,23 @@ import PackageDescription
 
 let package = Package(
     name: "NextcloudSyncLab",
+    platforms: [
+        .macOS(.v26),
+    ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-argument-parser.git", from: "1.2.0"),
+        .package(url: "https://github.com/i2h3/nextcloud-container-manager.git", from: "1.3.0"),
+        // .package(path: "../NextcloudContainerManager"),
+        .package(url: "https://github.com/modelcontextprotocol/swift-sdk.git", from: "0.11.0"),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
         .executableTarget(
             name: "NextcloudSyncLab",
             dependencies: [
                 .product(name: "ArgumentParser", package: "swift-argument-parser"),
+                .product(name: "NextcloudContainerManager", package: "nextcloud-container-manager"),
+                // .product(name: "NextcloudContainerManager", package: "NextcloudContainerManager"),
+                .product(name: "MCP", package: "swift-sdk"),
             ]
         ),
 
