@@ -15,17 +15,25 @@ struct NextcloudSyncLab: AsyncParsableCommand {
                     name: "start_server",
                     description: "Deploy a new Nextcloud server container",
                     inputSchema: .object([
+                        "type": .string("object"),
                         "properties": .object([
-                            "version": .string("Nextcloud server version release tag"),
-                        ])
+                            "version": .object([
+                                "type": .string("string"),
+                                "description": .string("Nextcloud server version release tag"),
+                            ]),
+                        ]),
                     ])
                 ),
                 Tool(
                     name: "stop_server",
                     description: "Stop and delete a Nextcloud server container",
                     inputSchema: .object([
+                        "type": .string("object"),
                         "properties": .object([
-                            "id": .string("Container ID returned by start_server"),
+                            "id": .object([
+                                "type": .string("string"),
+                                "description": .string("Container ID returned by start_server"),
+                            ]),
                         ]),
                         "required": .array([.string("id")])
                     ])
