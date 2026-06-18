@@ -2,20 +2,6 @@
 
 Tools for AI agents to set up and test Nextcloud desktop client synchronization scenarios in a development environment.
 
-More specifically, with this agents like Claude Code can efficiently:
-
-- set up a Nextcloud server container
-- configure a Nextcloud desktop client account connected to such server
-- inspect the local file provider domain state
-- inspect the remove server file tree state
-- perform mutations on the local and remote state
-- reproduce synchronization processes
-
-## Features
-
-- Nextcloud server MCP
-- Nextcloud desktop client MCP
-
 ## Requirements
 
 - macOS 26 Tahoe (support for other platforms might be possible but is out of scope for now)
